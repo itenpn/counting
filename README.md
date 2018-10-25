@@ -47,7 +47,7 @@ if pos1 == 9:
   pos1 = 0
   if pos2 == 9:
     pos2 = 0
-    //continue the nesting
+    #continue the nesting
   else:
     pos2 += 1
 else:
@@ -61,7 +61,7 @@ closing, let's use a for loop, which is perfect for our problem!
 
 ```python
 for i in range(1, 1000001):
-  //code
+  #code
 ```
 
 If you don't know, python does for loops by going through the index of an array. 
