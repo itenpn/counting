@@ -22,6 +22,8 @@ to convert an integer value into separate string inputs. It's a good idea to map
 we plan on doing before we write down some code. Let's try to understand the process we are trying
 to accomplish.
 
+### Modeling
+
 Example 1.1: `2018`
 
 This number is given to my program as an integer with a value of 2018. 
@@ -78,7 +80,7 @@ c = 0
 d = 0
 e = 0
 f = 0
-for i in range(start, 1000001):
+for i in range(1, 1000001):
     if f == 9:
         if e == 9:
             e = 0
@@ -98,3 +100,16 @@ for i in range(start, 1000001):
         else:
             e += 1
 ```
+
+### Putting the Logic to Work
+
+Now we have a program that can count, but how should we initialize f? Especially since we may not want to start at 1. We may want to start somewhere in the middle. After all, it takes a long time to count to a million. This is where the line `f = i % 10` comes in to play. This allows us to analyze the remainder of dividing the number by 10, which is the "ones" place. Using the nested if tests, we can start the chain to get the program rolling. Add this at the end of the if tests.
+
+```python
+for i in range(1, 1000001):
+  #The if tests
+  f = i % 10
+```
+
+Once we can start the chain, we are ready to finally get useful information out of these values.
+You may recall that `press()` accepts a string input.
