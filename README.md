@@ -67,3 +67,34 @@ for i in range(1, 1000001):
 If you don't know, python does for loops by going through the index of an array. 
 `range(1, 1000001)` creates an array of values of every integer between 1 and 1 million.
 i then becomes any number on that array, so it starts as 1, then 2, and so forth.
+
+As of right now, our code will look something like this:
+
+```python
+from pyautogui import press
+a = 0
+b = 0
+c = 0
+d = 0
+e = 0
+f = 0
+for i in range(start, 1000001):
+    if f == 9:
+        if e == 9:
+            e = 0
+            if d == 9:
+                d = 0
+                if c == 9:
+                    c = 0
+                    if b == 9:
+                        b = 0
+                        a += 1
+                    else:
+                        b += 1
+                else:
+                    c +=1
+            else:
+                d += 1
+        else:
+            e += 1
+```
